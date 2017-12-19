@@ -14,7 +14,7 @@ module.exports = function(pandora) {
     // 但是会分配到激活了的进程中去
     .process('weak-all')
 
-    // 配置 ETCD 的地址
+    // 配置 etcd 的地址
     .config({
       host: 'http://localhost:2379'
     });
