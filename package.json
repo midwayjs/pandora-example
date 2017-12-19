@@ -1,0 +1,16 @@
+{
+  "name": "trypandora",
+  "version": "1.0.0",
+  "description": "",
+  "main": "httpServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jayson": "^2.0.5",
+    "node-etcd": "^5.1.0",
+    "uuid": "^3.1.0"
+  }
+}
