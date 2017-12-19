@@ -1,6 +1,5 @@
 module.exports = function(pandora) {
 
-
   /**
    * Part 1 : 基础 Service
    * Etcd 是所有进程都要有的基础 Service
@@ -53,7 +52,5 @@ module.exports = function(pandora) {
     .config({
       port: 5555
     });
-
-
 
 };
