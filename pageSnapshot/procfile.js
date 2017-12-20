@@ -8,19 +8,25 @@ module.exports = function(pandora) {
       pandora.process('background').scale(1);
   */
 
+  // 调整后台任务进程（background）的内存限制
   pandora
     .process('background')
     .argv(['--max-old-space-size=512']);
 
+  // 将截图服务放到 background 进程
   pandora
     .service('pageSnapshot', './services/PageSnapshot')
     .process('background')
+
+    // *** 重要：表示发布到 IPC-Hub 中
     .publish();
 
+  // 将 Web 服务放到 worker 进程
   pandora
     .service('web', './services/Web')
     .process('worker')
     .config({
+      // 配置监听端口号
       port: 5511
     });
 
