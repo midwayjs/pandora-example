@@ -37,7 +37,6 @@ class TryWeb {
 
     // 异步等待 Server 监听成功才算启动完成
     await promisify(this.server.listen).call(this.server, this.port);
-    this.server.listen(this.port);
 
     // 启动完成
     this.logger.info('Service HTTP Server Listens On http://127.0.0.1:' + this.port);
@@ -53,7 +52,7 @@ class TryWeb {
     // 异步等待取消监听成功才算停止完成
     await promisify(this.server.close).call(this.server);
 
-    this.logger.info('Service HTTP Server Listens Service stopped');
+    this.logger.info('Service HTTP Server Stopped');
 
   }
 
