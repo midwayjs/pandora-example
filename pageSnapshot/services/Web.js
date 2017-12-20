@@ -19,7 +19,7 @@ module.exports = class Web extends SimpleHTTP {
   async onRequest(req, res) {
 
     // 标准的日志对象，父类中通过 this.logger = ctx.logger 获得
-    // this.logger.info('Got a request url: ' + req.url);
+    this.logger.info('Got a request url: ' + req.url);
 
     // 从 query 中获得 method 和 params
     const query = querystring.parse(url.parse(req.url).query);
